@@ -138,3 +138,5 @@ Used the COUNT() function to verify the number of records in each table.
 SELECT COUNT(Book_ID) FROM Books;
 SELECT COUNT(Customer_ID) FROM Customer;
 SELECT COUNT(Order_ID) FROM Order_details;
+
+
