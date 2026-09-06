@@ -94,8 +94,10 @@ Order_details
    │ Book_ID
    │
 Books
-<h5>
-Relationships</h5>
+
+
+Relationships
+
 Customer.Customer_ID
         ↓
 Order_details.Customer_ID
@@ -104,4 +106,35 @@ Books.Book_ID
         ↓
 Order_details.Book_ID
 
-<h6> This helps maintain referential integrity between customers, books, and orders.</h6>
+This helps maintain referential integrity between customers, books, and orders.
+
+🔍 Project Workflow
+1️⃣ Create Database
+Created the Online_Bookstore database and selected it for further operations.
+
+CREATE DATABASE Online_Bookstore;
+USE Online_Bookstore;
+
+2️⃣ Create Tables
+Created three relational tables:
+
+Books
+Customer
+Order_details
+
+Primary keys were added to uniquely identify records.
+
+3️⃣ Create Foreign Key Relationships
+Foreign keys were added to connect orders with customers and books.
+FOREIGN KEY (Customer_ID)
+REFERENCES Customer(Customer_ID)
+
+FOREIGN KEY (Book_ID)
+REFERENCES Books(Book_ID)
+
+4️⃣ Validate Record Counts
+Used the COUNT() function to verify the number of records in each table.
+
+SELECT COUNT(Book_ID) FROM Books;
+SELECT COUNT(Customer_ID) FROM Customer;
+SELECT COUNT(Order_ID) FROM Order_details;
